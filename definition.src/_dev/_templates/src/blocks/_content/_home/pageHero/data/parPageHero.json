@@ -1,0 +1,22 @@
+{
+    "title": "Learn From The Expert",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.",
+    "links": [
+        {
+            "label": "Admission Now",
+            "href": "#",
+            "title": ""
+        }
+    ],
+    "signupForm": {
+        "title": "Sign up",
+        "form": {
+            "$ref": "/parForm"
+
+        }
+    },
+    "backgroundImage": {
+        "src": "/_client/images/hero_1.jpg",
+        "alt": ""
+    } 
+}

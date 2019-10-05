@@ -1,0 +1,32 @@
+{
+    "id": "/parPageHeader",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "backgroundImage": {
+            "$ref": "./parDataImage.schema"
+        },
+        "title": {
+            "type": "string"
+        },
+        "subTitles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "link": {
+                        "$ref": "./parDataLink.schema"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "_ref": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

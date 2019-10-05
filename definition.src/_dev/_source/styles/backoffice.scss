@@ -1,0 +1,34 @@
+$is-yuzu-backend: true;
+
+.yuzu-back-office {
+    // IMPORT CSS STYLESHEETS
+    @import "../css/bootstrap.min";
+    @import "../css/jquery-ui";
+    // @import "../css/owl.carousel.min";
+    @import "../css/owl.theme.default.min";
+    // @import "../css/jquery.fancybox.min";
+    @import "../css/bootstrap-datepicker";
+    // @import "../css/aos";
+
+    
+    // IMPORT SCSS
+    @import "bootstrap/functions";
+    @import "bootstrap/variables";
+    @import "bootstrap/mixins";
+
+    @import "_tools.backend-specific.scss";
+    
+    // Mock body style inheritance
+    > * {
+        line-height: 1.7;
+        color: lighten($black, 50%);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-weight: 300;
+        font-size: $font-size-base + .1rem;
+    }
+
+    @import "site-base";
+    @import "site-navbar";
+    @import "site-blocks";
+
+}

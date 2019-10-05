@@ -1,0 +1,31 @@
+{
+    "navLinks": [
+        {
+            "label": "Home",
+            "href": "#home-section",
+            "title": ""
+        },
+        {
+            "label": "Courses",
+            "href": "#courses-section",
+            "title": ""
+        },
+        {
+            "label": "Programs",
+            "href": "#programs-section",
+            "title": ""
+        },
+        {
+            "label": "Teachers",
+            "href": "#teachers-section",
+            "title": ""
+        }
+    ],
+    "navButtons": [
+        {
+            "label": "Contact Us",
+            "href": "#contact-section",
+            "title": ""
+        }
+    ] 
+}

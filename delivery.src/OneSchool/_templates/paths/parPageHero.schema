@@ -1,0 +1,13 @@
+{
+    "refs": {
+        "/links": [
+            "/parDataLink"
+        ],
+        "/signupForm/form": [
+            "/parDataForm^parFormBuilder"
+        ],
+        "/backgroundImage": [
+            "/parDataImage"
+        ]
+    }
+}

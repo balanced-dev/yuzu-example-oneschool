@@ -1,0 +1,76 @@
+{
+  "models": {
+    "vmBlock_CourseTitle": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "type": 2,
+        "groupName": "Body"
+      },
+      "documentTypeAlias": "course",
+      "properties": {
+        "Title": 1084,
+        "Schedule": 1085
+      }
+    },
+    "vmBlock_PageHeader": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "type": 2,
+        "groupName": "Hero"
+      },
+      "documentTypeAlias": "course",
+      "properties": {
+        "BackgroundImage": 1087,
+        "Title": 1088,
+        "SubTitles": 1089
+      }
+    },
+    "vmBlock_CourseTeacher": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GlobalStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentContentId": "1284",
+        "addAreaNode": false,
+        "primaryPropertyName": "teacherName",
+        "propertyPrefix": null,
+        "type": 1,
+        "groupName": null
+      },
+      "documentTypeAlias": "teacher",
+      "properties": {}
+    },
+    "vmSub_TeacherProfilesTeacher": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GlobalStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentContentId": "1284",
+        "addAreaNode": false,
+        "primaryPropertyName": "teacherName",
+        "propertyPrefix": null,
+        "type": 1,
+        "groupName": null
+      },
+      "documentTypeAlias": "teacher",
+      "properties": {}
+    },
+    "vmSub_CourseListItem": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GlobalStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentContentId": "1278",
+        "addAreaNode": false,
+        "primaryPropertyName": "title",
+        "propertyPrefix": null,
+        "type": 1,
+        "groupName": "Summary"
+      },
+      "documentTypeAlias": "course",
+      "properties": {
+        "Image": 1050,
+        "Title": 1051,
+        "Description": 1052,
+        "Price": 1053,
+        "Duration": 1054,
+        "ParticipationCount": 1055,
+        "CommentCount": 1056
+      }
+    }
+  }
+}

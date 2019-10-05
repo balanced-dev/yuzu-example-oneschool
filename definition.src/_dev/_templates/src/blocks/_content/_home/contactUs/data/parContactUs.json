@@ -1,0 +1,7 @@
+{
+    "title": "Message Us",
+    "text": "Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.",
+    "form": {
+        "$ref": "/parForm_contact"
+    } 
+}

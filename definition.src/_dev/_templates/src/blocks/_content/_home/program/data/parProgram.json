@@ -1,0 +1,20 @@
+{
+    "isImageAlignedRight": false,
+    "title": "We Are Excellent In Education",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.",
+    "image": {
+        "src": "/_client/images/undraw_youtube_tutorial.svg",
+        "alt": ""
+    },
+    "statistics": [
+        {
+            "icon": "graduation-cap",
+            "text": "22,931 Yearly Graduates"
+        },
+        {
+            
+            "icon": "university",
+            "text": "150 Universities Worldwide"
+        }
+    ] 
+}

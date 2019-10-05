@@ -1,0 +1,22 @@
+{
+    "backgroundImage": {
+        "src": "/_client/images/img_2.jpg",
+        "alt": ""
+    },
+    "title": "Logo Design Course",
+    "subTitles": [
+        {
+            "text": "4 Lessons / 12 Week"
+        },
+        {
+            "text": "2,193 students"
+        },
+        {
+            "link": {
+                "label": "6 comments",
+                "href": "#comments",
+                "title": ""
+            }
+        }
+    ] 
+}

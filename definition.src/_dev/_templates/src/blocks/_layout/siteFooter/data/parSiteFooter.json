@@ -1,0 +1,39 @@
+{
+    "aboutSection": {
+        "title": "ABOUT ONESCHOOL",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consectetur ut hic ipsum et veritatis corrupti. Itaque eius soluta optio dolorum temporibus in, atque, quos fugit sunt sit quaerat dicta."
+    },
+    "linkSection": {
+        "title": "LINKS",
+        "links": [
+            {
+                "label": "Home",
+                "href": "#home-section",
+                "title": ""
+            },
+            {
+                "label": "Courses",
+                "href": "#courses-section",
+                "title": ""
+            },
+            {
+                "label": "Programs",
+                "href": "#programs-section",
+                "title": ""
+            },
+            {
+                "label": "Teachers",
+                "href": "#teachers-section",
+                "title": ""
+            }
+        ]
+    },
+    "newsletterSection": {
+        "title": "SUBSCRIBE",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt incidunt iure iusto architecto? Numquam, natus?",
+        "form": {
+            "$ref": "/parForm_footer"
+        }
+    },
+    "isGrey": false
+}

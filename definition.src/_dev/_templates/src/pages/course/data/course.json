@@ -1,0 +1,63 @@
+{
+    "header": {
+        "$ref": "/parPageHeader"
+    },
+    "title": {
+        "$ref": "/parCourseTitle"
+    },
+    "content": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "gridSize": 12,
+                        "items": [
+                            {
+                                "$ref": "/parRte"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "gridSize": 6,
+                        "items": [
+                            {
+                                "$ref": "/parGridImage"
+                            },
+                            {
+                                "$ref": "/parRte_paragraph"
+                            }
+                        ]
+                    },
+                    {
+                        "gridSize": 6,
+                        "items": [
+                            {
+                                "$ref": "/parGridImage_2"
+                            },
+                            {
+                                "$ref": "/parRte_paragraph"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "teacher": {
+        "$ref": "/parCourseTeacher"
+    },
+    "comments": {
+        "$ref": "/parComments"
+    },
+    "courses": {
+        "$ref": "/parCourseList"
+    },
+    "_layout": {
+        "name": "_page",
+        "data": "_page_grey-footer"
+    }
+}

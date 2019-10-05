@@ -1,0 +1,32 @@
+{
+    "teachers": [
+        {
+            "headshot": {
+                "src": "/_client/images/person_3.jpg",
+                "alt": ""
+            },
+            "teacherName": "Benjamin Stone",
+            "position": "Physics Teacher",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident."
+        },
+        {
+            "headshot": {
+                "src": "/_client/images/person_1.jpg",
+                "alt": ""
+            },
+            "teacherName": "Katleen Stone",
+            "position": "Physics Teacher",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident."
+        },
+        {
+            "headshot": {
+                "src": "/_client/images/person_2.jpg",
+                "alt": ""
+            },
+            "teacherName": "Sadie White",
+            "position": "Physics Teacher",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident."
+        }
+    ],
+    "nextPageEndpoint": ""
+}

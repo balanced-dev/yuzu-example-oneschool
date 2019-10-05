@@ -1,0 +1,12 @@
+{
+    "background": {
+        "src": "/_client/images/hero_1.jpg",
+        "alt": ""
+    },
+    "headshot": {
+        "src": "/_client/images/person_4.jpg",
+        "alt": ""
+    },
+    "title": "Jerome Jensen",
+    "bodyText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum rem soluta sit eius necessitatibus voluptate excepturi beatae ad eveniet sapiente impedit quae modi quo provident odit molestias! Rem reprehenderit assumenda" 
+}

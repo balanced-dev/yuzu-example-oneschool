@@ -1,0 +1,24 @@
+{
+    "id": "/parQuote",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "background": {
+            "$ref": "./parDataImage.schema"
+        },
+        "headshot": {
+            "$ref": "./parDataImage.schema"
+        },
+        "title": {
+            "type": "string"
+        },
+        "bodyText": {
+            "type": "string"
+        },
+        "_ref": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

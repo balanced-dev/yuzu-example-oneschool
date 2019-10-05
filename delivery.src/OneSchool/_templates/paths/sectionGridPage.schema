@@ -1,0 +1,13 @@
+{
+    "refs": {
+        "/content": [
+            "/parDataGridRows^parSectionGrid"
+        ],
+        "/header": [
+            "/parSiteHeader"
+        ],
+        "/footer": [
+            "/parSiteFooter"
+        ]
+    }
+}

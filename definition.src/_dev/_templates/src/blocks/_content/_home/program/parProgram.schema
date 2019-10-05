@@ -1,0 +1,36 @@
+{
+    "id": "/parProgram",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "isImageAlignedRight": {
+            "type": "boolean"
+        },
+        "title": {
+            "type": "string"
+        },
+        "text": {
+            "type": "string"
+        },
+        "image": {
+            "$ref": "/parDataImage"
+        },
+        "statistics": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "icon": {
+                        "type": "string",
+                        "enum": ["graduation-cap","university"]
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                }
+            }
+        } 
+    },
+    "additionalProperties": false
+}

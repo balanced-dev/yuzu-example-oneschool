@@ -1,0 +1,25 @@
+{
+    "id": "/parSectionGridConfig",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "navigationId": {
+            "type": "string"
+        },
+        "backgroundTheme": {
+            "type": "string"
+        },
+        "removePaddingTop": {
+            "type": "boolean"
+        },
+        "removePaddingBottom": {
+            "type": "boolean"
+        },
+        "width": {
+            "type": "string",
+            "enum": ["full","container"]
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+    "id": "/parGridImage",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "image": {
+            "$ref": "/parDataImage"
+        } 
+    },
+    "additionalProperties": false
+}

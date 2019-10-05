@@ -1,0 +1,41 @@
+{
+    "title": "Courses",
+    "items": [
+        {
+            "image": {
+                "src": "/_client/images/img_1.jpg",
+                "alt": ""
+            },
+            "title": "Logo design course",
+            "description": "Lorem ipsum",
+            "price": "£99",
+            "duration": "4 lessons / 12 weeks",
+            "participationCount": "1,567",
+            "commentCount": 2
+        },
+        {
+            "image": {
+                "src": "/_client/images/img_2.jpg",
+                "alt": ""
+            },
+            "title": "JS course",
+            "description": "Lorem ipsum",
+            "price": "£54",
+            "duration": "4 lessons / 1 week",
+            "participationCount": "255",
+            "commentCount": 0
+        },
+        {
+            "image": {
+                "src": "/_client/images/img_3.jpg",
+                "alt": ""
+            },
+            "title": "Law of physics",
+            "description": "Lorem ipsum",
+            "price": "£99",
+            "duration": "5 lessons / 6 weeks",
+            "participationCount": "20",
+            "commentCount": 9
+        }
+    ] 
+}

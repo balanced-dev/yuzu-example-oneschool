@@ -1,0 +1,35 @@
+{
+    "title": {
+        "$ref": "/parSectionHeader_advantages"
+    },
+    "items": [
+        {
+            "icon": "graduation-cap",
+            "text": "22,931 Yearly Graduates"
+        },
+        {
+            "icon": "university",
+            "text": "150 Universities Worldwide"
+        },
+        {
+            "icon": "graduation-cap",
+            "text": "Top Professionals in The World"
+        },
+        {
+            "icon": "university",
+            "text": "Expand Your Knowledge"
+        },
+        {
+            "icon": "graduation-cap",
+            "text": "Best Online Teaching Assistant Courses"
+        },
+        {
+            "icon": "university",
+            "text": "Best Teachers"
+        }
+    ],
+    "image": {
+        "src": "/_client/images/person_transparent.png",
+        "alt": ""
+    } 
+}

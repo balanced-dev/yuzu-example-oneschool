@@ -1,0 +1,46 @@
+{
+	"id": "/parDataGridRowsColumns",
+    "type": "object",
+    "anyOfTypes": ["parCourseGrid"],
+	"properties": {
+        "rows": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "config": {
+                        "type": "object",
+                        "properties": {}
+                    },
+                    "columns": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "gridSize":{
+                                    "anyOf": [
+                                        {
+                                            "$ref": "/parCourseGridSizes"
+                                        }
+                                    ]
+                                },
+                                "config": {
+                                    "type": "object",
+                                    "properties": {}
+                                },
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$ref": "/parCourseGridItem"
+                                        }
+                                    ]
+                                }  
+                            }
+                        }
+                    } 
+                }
+            }
+        } 
+    },
+    "additionalProperties": false
+}

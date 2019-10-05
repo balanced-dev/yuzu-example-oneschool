@@ -1,0 +1,22 @@
+{
+    "parSectionGrid": {
+        "refs": {
+            "/rows/config": [
+                "/parSectionGridConfig"
+            ],
+            "/rows/items": [
+                "/parAdvantages",
+                "/parContactUs",
+                "/parCourseList",
+                "/parPageHero",
+                "/parProgram",
+                "/parQuote",
+                "/parSectionHeader",
+                "/parTeacherProfiles"
+            ]
+        }
+    },
+    "anyOfTypes": [
+        "parSectionGrid"
+    ]
+}

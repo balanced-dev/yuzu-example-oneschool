@@ -1,0 +1,14 @@
+{
+    "title": "1 comment",
+    "items": [
+        {
+            "headshot": {
+                "src": "/_client/images/person_1.jpg",
+                "alt": ""
+            },
+            "name": "Jean Doe",
+            "timestamp": "January 9, 2018 at 2:21pm",
+            "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "commentList": {
+        "$ref": "/parCommentList"
+    },
+    "endpoints": {
+        "commentList": "/api/getPreview/parCommentList_newComment",
+        "commentForm": "/api/getPreview/parForm_comment-submitted"
+    },
+    "commentForm": {
+        "title": "Leave a comment",
+        "form": {
+            "$ref": "/parForm_comment"
+        }
+    }
+}

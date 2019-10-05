@@ -1,0 +1,10 @@
+{
+    "logo": {
+        "src": "",
+        "alt": ""
+    },
+    "nav": {
+        "$ref": "/parSiteNav"
+    },
+    "companyName": "OneSchool" 
+}

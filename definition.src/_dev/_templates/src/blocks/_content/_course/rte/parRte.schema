@@ -1,0 +1,12 @@
+{
+    "id": "/parRte",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "string"
+        } 
+    },
+    "additionalProperties": false
+}
