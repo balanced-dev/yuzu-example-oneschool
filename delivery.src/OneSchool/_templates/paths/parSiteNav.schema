@@ -1,10 +1,10 @@
 {
     "refs": {
         "/navLinks": [
-            "/parDataLink"
+            "/dataLink"
         ],
         "/navButtons": [
-            "/parDataLink"
+            "/dataLink"
         ]
     }
 }

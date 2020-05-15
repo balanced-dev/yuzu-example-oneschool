@@ -5,7 +5,7 @@
     "type": "object",
     "properties": {
         "logo": {
-            "$ref": "./parDataImage.schema"
+            "$ref": "./dataImage.schema"
         },
         "nav": {
             "$ref": "./parSiteNav.schema"
@@ -15,6 +15,12 @@
         },
         "_ref": {
             "type": "string"
+        },
+        "_modifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false

@@ -13,7 +13,7 @@
         "links": {
             "type": "array",
             "items": {
-                "$ref": "./parDataLink.schema"
+                "$ref": "./dataLink.schema"
             }
         },
         "signupForm": {
@@ -23,16 +23,22 @@
                     "type": "string"
                 },
                 "form": {
-                    "$ref": "./parDataForm.schema",
+                    "$ref": "./dataForm.schema",
                     "anyOfType": "parFormBuilder"
                 }
             }
         },
         "backgroundImage": {
-            "$ref": "./parDataImage.schema"
+            "$ref": "./dataImage.schema"
         },
         "_ref": {
             "type": "string"
+        },
+        "_modifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false

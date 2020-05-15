@@ -1,0 +1,101 @@
+{
+    "content": {
+        "rows": [
+            {
+                
+                "items": [
+                    {
+                        "$ref": "/parPageHero"
+                    }
+                ],
+                "config": {
+                    "backgroundTheme": "",
+                    "navigationId": "home-section",
+                    "removePaddingTop": false,
+                    "removePaddingBottom": false
+                }
+            },
+            {
+                "items": [
+                    {
+                        "$ref": "/parCourseList"
+                    }
+                ],
+                "config": {
+                    "backgroundTheme": "",
+                    "navigationId": "courses-section",
+                    "removePaddingTop": true,
+                    "removePaddingBottom": false
+                }
+            },
+            {
+                "items": [
+                    {
+                        "$ref": "/parSectionHeader"
+                    },
+                    {
+                        "$ref": "/parProgram"
+                    },
+                    {
+                        "$ref": "/parProgram_image-right"
+                    },
+                    {
+                        "$ref": "/parProgram_no-copy"
+                    }
+                ],
+                "config": {
+                    "backgroundTheme": "",
+                    "navigationId": "programs-section",
+                    "removePaddingTop": false,
+                    "removePaddingBottom": false
+                }
+            },
+            {
+                "items": [
+                    {
+                        "$ref": "/parSectionHeader_teachers"
+                    },
+                    {
+                        "$ref": "/parTeacherProfiles"
+                    },
+                    {
+                        "$ref": "/parQuote"
+                    }
+                ],
+                "config": {
+                    "backgroundTheme": "",
+                    "navigationId": "teachers-section",
+                    "removePaddingTop": false,
+                    "removePaddingBottom": true
+                }
+            },
+            {
+                "items": [
+                    {
+                        "$ref": "/parAdvantages"
+                    }
+                ],
+                "config": {
+                    "backgroundTheme": "",
+                    "navigationId": "",
+                    "removePaddingTop": false,
+                    "removePaddingBottom": true
+                }
+            },
+            {
+                "items": [
+                    {
+                        "$ref": "/parContactUs"
+                    }
+                ],
+                "config": {
+                    "backgroundTheme": "light",
+                    "navigationId": "contact-section",
+                    "removePaddingTop": false,
+                    "removePaddingBottom": false,
+                    "width": "full"
+                }
+            }
+        ] 
+    }
+}

@@ -1,14 +1,12 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<OneSchool.Core.UmbracoModels.Course>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Course>
 @{
     var course = Model as Course;
 }
 
-@(Html.RenderFETemplate<YuzuDelivery.Umbraco.Forms.vmBlock_DataForm>(new RenderSettings()
-{
-    Template = "parForm",
-    MapFrom = course.Comments.CommentForm.Form,
-    ShowJson = true
-},
-new Dictionary<string, object>() { { "HtmlHelper", Html }}))
-
+@(Html.RenderYuzu<YuzuDelivery.Umbraco.Forms.vmBlock_DataForm>(
+    course.CommentFormForm,
+    new Dictionary<string, object>() { { "FormBuilderTemplate", "parFormBuilder" } },
+    new RenderSettings() {
+        Template = "parForm"
+    }))
 

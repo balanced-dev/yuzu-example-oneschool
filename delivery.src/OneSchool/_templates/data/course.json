@@ -123,36 +123,40 @@
             "title": "Leave a comment",
             "form": {
                 "testForm": {
-                    "isSubmitted": false,
-                    "submittedMessage": "Your comment has been submitted",
+                    "isSuccess": false,
+                    "successMessage": "Your comment has been submitted",
                     "validation": {
                         "title": "Form Builder Validation",
-                        "textHtml": ""
+                        "message": ""
                     },
-                    "fields": [
+                    "fieldsets": [
                         {
-                            "name": "first-name",
-                            "placeholder": "First name",
-                            "_ref": "/parFormTextInput"
-                        },
-                        {
-                            "name": "last-name",
-                            "placeholder": "Last name",
-                            "_ref": "/parFormTextInput"
-                        },
-                        {
-                            "name": "email-address",
-                            "type": "email",
-                            "placeholder": "Email Address",
-                            "_ref": "/parFormTextInput"
-                        },
-                        {
-                            "name": "message",
-                            "placeholder": "Write your message here",
-                            "_ref": "/parFormTextArea"
+                            "fields": [
+                                {
+                                    "name": "first-name",
+                                    "placeholder": "First name",
+                                    "_ref": "/parFormTextInput"
+                                },
+                                {
+                                    "name": "last-name",
+                                    "placeholder": "Last name",
+                                    "_ref": "/parFormTextInput"
+                                },
+                                {
+                                    "name": "email-address",
+                                    "type": "email",
+                                    "placeholder": "Email Address",
+                                    "_ref": "/parFormTextInput"
+                                },
+                                {
+                                    "name": "message",
+                                    "placeholder": "Write your message here",
+                                    "_ref": "/parFormTextArea"
+                                }
+                            ]
                         }
                     ],
-                    "submitButtonLabel": "Post comment",
+                    "submitButtonText": "Post comment",
                     "_ref": "/parFormBuilder"
                 },
                 "_ref": "/parForm",

@@ -1,7 +1,7 @@
 {
     "refs": {
         "/form": [
-            "/parDataForm^parFormBuilder"
+            "/dataForm^parFormBuilder"
         ]
     }
 }

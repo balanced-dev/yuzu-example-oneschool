@@ -11,7 +11,7 @@
             "$ref": "./parCourseTitle.schema"
         },
         "content": {
-            "$ref": "./parDataGridRowsColumns.schema",
+            "$ref": "./dataGrid.schema",
             "anyOfType": "parCourseGrid"
         },
         "teacher": {

@@ -5,7 +5,7 @@
     "type": "object",
     "properties": {
         "backgroundImage": {
-            "$ref": "./parDataImage.schema"
+            "$ref": "./dataImage.schema"
         },
         "title": {
             "type": "string"
@@ -16,7 +16,7 @@
                 "type": "object",
                 "properties": {
                     "link": {
-                        "$ref": "./parDataLink.schema"
+                        "$ref": "./dataLink.schema"
                     },
                     "text": {
                         "type": "string"
@@ -26,6 +26,12 @@
         },
         "_ref": {
             "type": "string"
+        },
+        "_modifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false

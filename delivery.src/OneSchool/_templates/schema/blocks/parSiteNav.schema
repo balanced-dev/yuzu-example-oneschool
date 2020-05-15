@@ -7,17 +7,23 @@
         "navLinks": {
             "type": "array",
             "items": {
-                "$ref": "./parDataLink.schema"
+                "$ref": "./dataLink.schema"
             }
         },
         "navButtons": {
             "type": "array",
             "items": {
-                "$ref": "./parDataLink.schema"
+                "$ref": "./dataLink.schema"
             }
         },
         "_ref": {
             "type": "string"
+        },
+        "_modifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false

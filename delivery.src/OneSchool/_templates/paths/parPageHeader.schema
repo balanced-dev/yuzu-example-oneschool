@@ -1,10 +1,10 @@
 {
     "refs": {
         "/backgroundImage": [
-            "/parDataImage"
+            "/dataImage"
         ],
         "/subTitles/link": [
-            "/parDataLink"
+            "/dataLink"
         ]
     }
 }

@@ -1,0 +1,17 @@
+{
+  "id": "1b314bb1-e4f9-4083-9518-6b409b878216",
+  "name": "Send template email to admin@admin.co.uk",
+  "form": "8a475606-f90b-48dc-a46f-599b8b957ac0",
+  "active": true,
+  "includeSensitiveData": "False",
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "admin@admin.co.uk",
+    "SenderEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

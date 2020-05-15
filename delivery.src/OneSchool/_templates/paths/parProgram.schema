@@ -7,7 +7,7 @@
     },
     "refs": {
         "/image": [
-            "/parDataImage"
+            "/dataImage"
         ]
     }
 }

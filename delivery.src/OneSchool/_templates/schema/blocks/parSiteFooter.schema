@@ -24,7 +24,7 @@
                 "links": {
                     "type": "array",
                     "items": {
-                        "$ref": "./parDataLink.schema"
+                        "$ref": "./dataLink.schema"
                     }
                 }
             }
@@ -39,7 +39,7 @@
                     "type": "string"
                 },
                 "form": {
-                    "$ref": "./parDataForm.schema",
+                    "$ref": "./dataForm.schema",
                     "anyOfType": "parFormFooter"
                 }
             }
@@ -49,6 +49,12 @@
         },
         "_ref": {
             "type": "string"
+        },
+        "_modifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false

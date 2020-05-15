@@ -1,34 +1,9 @@
 {
   "models": {
-    "vmBlock_CourseTitle": {
-      "storeContentAs": {
-        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
-        "type": 2,
-        "groupName": "Body"
-      },
-      "documentTypeAlias": "course",
-      "properties": {
-        "Title": 1123,
-        "Schedule": 1124
-      }
-    },
-    "vmBlock_PageHeader": {
-      "storeContentAs": {
-        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
-        "type": 2,
-        "groupName": "Hero"
-      },
-      "documentTypeAlias": "course",
-      "properties": {
-        "BackgroundImage": 1125,
-        "Title": 1126,
-        "SubTitles": 1127
-      }
-    },
     "vmBlock_CourseTeacher": {
       "storeContentAs": {
         "$type": "YuzuDelivery.Umbraco.Import.GlobalStoreContentAs, YuzuDelivery.Umbraco.Import",
-        "parentContentId": "1284",
+        "parentContentId": "1069",
         "addAreaNode": false,
         "primaryPropertyName": "teacherName",
         "propertyPrefix": null,
@@ -41,7 +16,7 @@
     "vmSub_TeacherProfilesTeacher": {
       "storeContentAs": {
         "$type": "YuzuDelivery.Umbraco.Import.GlobalStoreContentAs, YuzuDelivery.Umbraco.Import",
-        "parentContentId": "1284",
+        "parentContentId": "1069",
         "addAreaNode": false,
         "primaryPropertyName": "teacherName",
         "propertyPrefix": null,
@@ -54,7 +29,7 @@
     "vmSub_CourseListItem": {
       "storeContentAs": {
         "$type": "YuzuDelivery.Umbraco.Import.GlobalStoreContentAs, YuzuDelivery.Umbraco.Import",
-        "parentContentId": "1278",
+        "parentContentId": "1070",
         "addAreaNode": false,
         "primaryPropertyName": "title",
         "propertyPrefix": null,
@@ -63,14 +38,205 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "Image": 1116,
-        "Title": 1117,
-        "Description": 1118,
-        "Price": 1119,
-        "Duration": 1120,
-        "ParticipationCount": 1121,
-        "CommentCount": 1122
+        "Image": 55,
+        "Title": 56,
+        "Description": 57,
+        "Price": 58,
+        "Duration": 59,
+        "ParticipationCount": 60,
+        "CommentCount": 61
+      }
+    },
+    "vmSub_CommentsCommentForm": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "CommentForm",
+        "parentPropertyType": "vmBlock_Comments",
+        "type": 2,
+        "groupName": "CommentForm"
+      },
+      "documentTypeAlias": "course",
+      "properties": {
+        "Title": 62,
+        "Form": 63
+      }
+    },
+    "vmSub_SiteFooterAboutSection": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "AboutSection",
+        "parentPropertyType": "vmBlock_SiteFooter",
+        "type": 2,
+        "groupName": "AboutSection"
+      },
+      "documentTypeAlias": "home",
+      "properties": {
+        "Title": 64,
+        "Text": 65
+      }
+    },
+    "vmSub_SiteFooterLinkSection": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "LinkSection",
+        "parentPropertyType": "vmBlock_SiteFooter",
+        "type": 2,
+        "groupName": "LinkSection"
+      },
+      "documentTypeAlias": "home",
+      "properties": {
+        "Title": 66,
+        "Links": 67
+      }
+    },
+    "vmSub_SiteFooterNewsletterSection": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "NewsletterSection",
+        "parentPropertyType": "vmBlock_SiteFooter",
+        "type": 2,
+        "groupName": "NewsletterSection"
+      },
+      "documentTypeAlias": "home",
+      "properties": {
+        "Title": 68,
+        "Text": 69,
+        "Form": 70
+      }
+    },
+    "vmBlock_SiteNav": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "Nav",
+        "parentPropertyType": "vmBlock_SiteHeader",
+        "type": 2,
+        "groupName": "Nav"
+      },
+      "documentTypeAlias": "home",
+      "properties": {
+        "NavLinks": 71,
+        "NavButtons": 72
+      }
+    },
+    "vmSub_PageHeroSignupForm": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "SignupForm",
+        "parentPropertyType": "vmBlock_PageHero",
+        "type": 2,
+        "groupName": "SignupForm"
+      },
+      "documentTypeAlias": "pageHero",
+      "properties": {
+        "Title": 73,
+        "Form": 74
+      }
+    },
+    "vmBlock_Comments": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "Comments",
+        "parentPropertyType": "vmPage_Course",
+        "type": 2,
+        "groupName": "Comments"
+      },
+      "documentTypeAlias": "course",
+      "properties": {}
+    },
+    "vmBlock_PageHeader": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "Header",
+        "parentPropertyType": "vmPage_Course",
+        "type": 2,
+        "groupName": "Header"
+      },
+      "documentTypeAlias": "course",
+      "properties": {
+        "BackgroundImage": 75,
+        "Title": 76,
+        "SubTitles": 77
+      }
+    },
+    "vmBlock_CourseTitle": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "Title",
+        "parentPropertyType": "vmPage_Course",
+        "type": 2,
+        "groupName": "Title"
+      },
+      "documentTypeAlias": "course",
+      "properties": {
+        "Title": 80,
+        "Schedule": 81
+      }
+    },
+    "vmBlock_SiteFooter": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "Footer",
+        "parentPropertyType": "vmPage_Home",
+        "type": 2,
+        "groupName": "Footer"
+      },
+      "documentTypeAlias": "home",
+      "properties": {
+        "IsGrey": 82
+      }
+    },
+    "vmBlock_SiteHeader": {
+      "storeContentAs": {
+        "$type": "YuzuDelivery.Umbraco.Import.GroupStoreContentAs, YuzuDelivery.Umbraco.Import",
+        "parentPropertyName": "Header",
+        "parentPropertyType": "vmPage_Home",
+        "type": 2,
+        "groupName": "Header"
+      },
+      "documentTypeAlias": "home",
+      "properties": {
+        "Logo": 83,
+        "CompanyName": 84
       }
     }
-  }
+  },
+  "ignoreViewmodels": [
+    "vmBlock_RowBuilderConfig",
+    "vmBlock_CourseGridSizes",
+    "vmBlock_CommentList",
+    "vmSub_CommentListItem"
+  ],
+  "ignoreViewmodelProperties": [
+    {
+      "Key": "vmBlock_TeacherProfiles",
+      "Value": "NextPageEndpoint"
+    },
+    {
+      "Key": "vmBlock_Comments",
+      "Value": "CommentList"
+    }
+  ],
+  "manualMappers": [
+    {
+      "dest": "vmPage_Course",
+      "destMember": "",
+      "source": "course",
+      "mapper": "CourseTypeAfterMap",
+      "group": ""
+    },
+    {
+      "dest": "vmSub_CourseListItem",
+      "destMember": "",
+      "source": "course",
+      "mapper": "CourseListItemTypeAfterMap",
+      "group": "Summary"
+    },
+    {
+      "dest": "vmBlock_Comments",
+      "destMember": "",
+      "source": "course",
+      "mapper": "CommentsTypeAfterMap",
+      "group": "Comments"
+    }
+  ]
 }

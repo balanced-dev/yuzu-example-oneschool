@@ -7,7 +7,7 @@
             "/parCourseTitle"
         ],
         "/content": [
-            "/parDataGridRowsColumns^parCourseGrid"
+            "/dataGrid^parCourseGrid"
         ],
         "/teacher": [
             "/parCourseTeacher"

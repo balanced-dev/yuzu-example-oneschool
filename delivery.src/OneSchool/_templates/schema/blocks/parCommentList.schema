@@ -13,7 +13,7 @@
                 "type": "object",
                 "properties": {
                     "headshot": {
-                        "$ref": "./parDataImage.schema"
+                        "$ref": "./dataImage.schema"
                     },
                     "name": {
                         "type": "string"
@@ -29,6 +29,12 @@
         },
         "_ref": {
             "type": "string"
+        },
+        "_modifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false

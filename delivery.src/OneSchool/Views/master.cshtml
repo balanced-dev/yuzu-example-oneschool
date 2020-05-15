@@ -1,5 +1,5 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
-@{ var root = Umbraco.ContentAtRoot().FirstOrDefault() as SectionGridPage; }
+@{ var root = Umbraco.ContentAtRoot().FirstOrDefault() as Home; }
 <!doctype html>
 <html>
 	<head>
@@ -26,11 +26,11 @@
 
         <div class="site-wrap">
 
-            @(Html.RenderFETemplate<vmBlock_SiteHeader>(new RenderSettings() { Template = "parSiteHeader", MapFrom = root.Header }))
+            @(Html.RenderYuzu<vmBlock_SiteHeader>(root))
 
             @RenderBody()
 
-            @(Html.RenderFETemplate<vmBlock_SiteFooter>(new RenderSettings() { Template = "parSiteFooter", MapFrom = root.Footer }, new Dictionary<string, object>() { { "HtmlHelper", Html } }))
+            @(Html.RenderYuzu<vmBlock_SiteFooter>(root))
 
         </div>
 

@@ -1,7 +1,7 @@
 {
     "refs": {
         "/teachers/headshot": [
-            "/parDataImage"
+            "/dataImage"
         ]
     }
 }

@@ -846,22 +846,41 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.CreateController
 			navigationService.hideDialog(showMenu);
 		};
 });
-angular.module("umbraco")
-.controller("UmbracoForms.Editors.Form.DeleteController",
-	function ($scope, formResource, navigationService, treeService) {
+(function () {
+	"use strict";
 
-	    $scope.delete = function (id) {
-	        formResource.deleteByGuid(id).then(function () {
-	            treeService.removeNode($scope.currentNode);
-	            navigationService.hideNavigation();
+	function Controller($scope, formResource, navigationService, notificationsService, treeService) {
 
-	        });
+		var vm = this;
+		vm.buttonState = "init";
 
-	    };
-	    $scope.cancelDelete = function () {
-	        navigationService.hideNavigation();
-	    };
-	});
+		vm.deleteForm = deleteForm;
+		vm.cancelDelete = cancelDelete;
+
+		function cancelDelete () {
+			navigationService.hideNavigation();
+		};
+
+		function deleteForm(id) {
+
+			vm.buttonState = "busy";
+			formResource.deleteByGuid(id).then(function() {
+				vm.buttonState = "success";
+				treeService.removeNode($scope.currentNode);
+				navigationService.hideNavigation();
+
+				notificationsService.success("Successfully deleted the form");
+			}, function(err) {
+				vm.buttonState = "error";
+				notificationsService.error("Form failed to delete", err.data.Message);
+			});
+
+		}
+	}
+
+	angular.module("umbraco").controller("UmbracoForms.Editors.Form.DeleteController", Controller);
+
+})();
 angular.module("umbraco").controller("UmbracoForms.Editors.Form.EditController",
 
     function ($scope, $routeParams, formResource, editorState, editorService, formService, notificationsService, contentEditingHelper, formHelper, navigationService, userService, securityResource, localizationService, workflowResource) {
@@ -1733,18 +1752,19 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.EntriesControlle
 		}
 	};
 
-	$scope.toggleAll = function(allIsChecked){
-
-		$scope.selectedRows.length = 0;
-
+	$scope.toggleAll = function(){
+	    
+		var newValue = !$scope.allIsChecked;
+		
 		for (var i = 0; i < $scope.records.results.length; i++) {
 			var entity = $scope.records.results[i];
-			entity.selected = allIsChecked;
 
-			if(allIsChecked){
-				$scope.selectedRows.push(entity.id);
-			}
+			if(entity.selected !== newValue){
+                $scope.toggleRow(entity);
+            }
+           
 		}
+
 	};
 
 	$scope.executeRecordSetAction = function (action) {
@@ -2035,6 +2055,8 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.EntriesSettingsC
         vm.addColumn = addColumn;
         vm.removeColumn = removeColumn;
         vm.toggleConditions = toggleConditions;
+        vm.close = close;
+        vm.submit = submit;
 
         var oldFieldset = "";
         var oldContainers = "";
@@ -2049,7 +2071,7 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.EntriesSettingsC
                 $scope.model.fieldset.condition.actionType = vm.actionTypes[0].value;
                 $scope.model.fieldset.condition.logicType = vm.logicTypes[0].value;
             }
-
+            
             oldFieldset = angular.copy($scope.model.fieldset);
             oldContainers = angular.copy($scope.model.fieldset.containers);
         }
@@ -2082,15 +2104,15 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.EntriesSettingsC
             formService.deleteContainer($scope.model.fieldset, container);
         }
 
-        vm.close = function (model) {
-
+        function close(model) {
+            
             $scope.model.fieldset.containers = oldContainers;
-            $scope.model.fieldset.condition = oldFieldset;
+            $scope.model.fieldset = oldFieldset;
 
             editorService.close();
         };
 
-        vm.submit = function () {
+        function submit() {
             editorService.close();
         };
 
@@ -2127,16 +2149,16 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.EntriesSettingsC
         vm.logicTypes = [];
         vm.operators = [];
         vm.mandatoryToggleText = "Field is mandatory";
-               
-        localizationService.localizeMany(
+
+
+        var localizeValidation = localizationService.localizeMany(
             [
                 "validation_validateAsEmail",
                 "validation_validateAsNumber",
                 "validation_validateAsUrl",
                 "validation_enterCustomValidation",
                 "validation_fieldIsMandatory"]
-        ).then(function(labels){
-
+        ).then(function (labels) {
             vm.validationTypes = [{
                 "name": labels[0],
                 "key": "email",
@@ -2175,6 +2197,7 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.EntriesSettingsC
         vm.toggleConditions = toggleConditions;
         vm.toggleMandatory = toggleMandatory;
         vm.toggleSensitiveData = toggleSensitiveData;
+        vm.matchValidationType = matchValidationType;
 
 
         //Creating duplicate of the fields array on the model
@@ -2252,37 +2275,37 @@ angular.module("umbraco").controller("UmbracoForms.Editors.Form.EntriesSettingsC
 
             if ($scope.model.field.regex !== null && $scope.model.field.regex !== "" && $scope.model.field.regex !== undefined) {
 
-                var match = false;
-
-                // find and show if a match from the list has been chosen
-                angular.forEach(vm.validationTypes, function (validationType, index) {
-                    if ($scope.model.field.regex === validationType.pattern) {
-                        vm.selectedValidationType = validationType;
-                        vm.showValidationPattern = true;
-                        match = true;
-                    }
-                });
-
-                // if there is no match - choose the custom validation option.
-                if (!match) {
-                    angular.forEach(vm.validationTypes, function (validationType) {
-                        if (validationType.key === "custom") {
+                return localizeValidation.then(function () {
+                    var match = false;
+                    // find and show if a match from the list has been chosen
+                    angular.forEach(vm.validationTypes, function (validationType, index) {
+                        if ($scope.model.field.regex === validationType.pattern) {
                             vm.selectedValidationType = validationType;
                             vm.showValidationPattern = true;
+                            match = true;
                         }
                     });
-                }
+                    if (!match) {
+                        // if there is no match - choose the custom validation option.
+                        angular.forEach(vm.validationTypes, function (validationType) {
+                            if (validationType.key === "custom") {
+                                vm.selectedValidationType = validationType;
+                                vm.showValidationPattern = true;
+                            }
+                        });
+                    }
+                });
             }
 
         }
 
-        function toggleConditions(){
+        function toggleConditions() {
             $scope.model.field.condition.enabled = !$scope.model.field.condition.enabled;
-        } 
-        function toggleSensitiveData(){
+        }
+        function toggleSensitiveData() {
             $scope.model.field.containsSensitiveData = !$scope.model.field.containsSensitiveData;
         }
-        function toggleMandatory(){
+        function toggleMandatory() {
             $scope.model.field.mandatory = !$scope.model.field.mandatory;
         }
         function changeValidationType(selectedValidationType) {
@@ -5240,28 +5263,67 @@ angular.module('umbraco.services').factory('formService', formService);
 
 })();
 
-angular.module('umbraco.filters').filter('truncate', function() {
-    
-    return function(input, noOfChars, appendDots) {
-        
-        //Check the length of the text we are filtering
-        //If its greater than noOfChars param
-        if(input.length > noOfChars){
-            //Trim the text to the length of the param
-            input = input.substr(0, noOfChars);
-            
-            //Only append the dots if we truncated
-            //Append Dots is a bool
-            if(appendDots){
-                input = input + "...";
-            }
-        }
-        
-        return input;
-    };
-  
-})
-.filter('fileName', function() {
+
+// Testing if filter already exists, otherwise we will create it. 
+angular.module("umbraco.filters").config(function($injector, $provide) {
+	if($injector.has('truncateFilter')) {
+		// Yep, we already got the filter!
+	} else {
+		
+        // injecting the filter on the provider, notice we need to add 'Filter' to the name for it to be a filter.
+        $provide.provider('truncateFilter', function() {
+    		return {
+                $get: function () {
+                    
+                    // Filter code
+                    return function (value, wordwise, max, tail) {
+						
+                        if (!value) return '';
+						
+                        /* 
+						Overload-fix to support Forms Legacy Version:
+						
+						We are making this hack to support the old version of the truncate filter.
+						The old version took different attributes, this code block checks if the first argument isnt a boolean, meaning its not the new version, meaning that the filter is begin used in the old way.
+						Therefor we use the second argument(max) to indicate wether we want a tail (…) and using the first argument(wordwise) as the second argument(max amount of characters)
+						*/
+                        if (typeof(wordwise) !== 'boolean') {
+                            // switch arguments around to fit Forms version.
+                            if (max !== true) {
+                                tail = '';
+                            }
+                            max = wordwise;
+                            wordwise = false;
+                        }
+                        // !end of overload fix.
+
+                        max = parseInt(max, 10);
+                        if (!max) return value;
+                        if (value.length <= max) return value;
+
+                        tail = (!tail && tail !== '') ? '…' : tail;
+
+                        if (wordwise && value.substr(max, 1) === ' ') {
+                          max++;
+                        }
+                        value = value.substr(0, max);
+
+                        if (wordwise) {
+                          var lastspace = value.lastIndexOf(' ');
+                          if (lastspace !== -1) {
+                              value = value.substr(0, lastspace+1);
+                          }
+                        }
+
+                        return value + tail;
+                    };
+                }
+    		}
+    	});
+    }
+});
+
+angular.module('umbraco.filters').filter('fileName', function() {
     
     return function(input) {
         

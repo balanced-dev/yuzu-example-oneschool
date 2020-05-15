@@ -11,11 +11,17 @@
             "type": "string"
         },
         "form": {
-            "$ref": "./parDataForm.schema",
+            "$ref": "./dataForm.schema",
             "anyOfType": "parFormBuilder"
         },
         "_ref": {
             "type": "string"
+        },
+        "_modifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false
