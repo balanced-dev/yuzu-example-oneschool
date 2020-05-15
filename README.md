@@ -3,7 +3,7 @@
 Copyright (C) HiFi Ltd 2019
 Distributed under the MIT license  
 
-A multiple page site example with bespoke mapping for Yuzu using a theme called One School. Includes multple grid types, four forms, besopoke mapping, stimulus js integration for ajax rendered partials and vue integration for more complect progressive js.
+A multiple page site example with bespoke mapping for Yuzu using a theme called One School. Includes multple grid types, composed pages, four forms, external data integration, besopoke mapping, stimulus js integration for ajax rendered partials and vue integration for more complect progressive js.
 
 umbraco login: admin@admin.co.uk admin123456
 

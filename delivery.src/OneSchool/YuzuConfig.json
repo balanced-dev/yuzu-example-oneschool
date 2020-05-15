@@ -8,8 +8,8 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "Title": 1084,
-        "Schedule": 1085
+        "Title": 1123,
+        "Schedule": 1124
       }
     },
     "vmBlock_PageHeader": {
@@ -20,9 +20,9 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "BackgroundImage": 1087,
-        "Title": 1088,
-        "SubTitles": 1089
+        "BackgroundImage": 1125,
+        "Title": 1126,
+        "SubTitles": 1127
       }
     },
     "vmBlock_CourseTeacher": {
@@ -63,13 +63,13 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "Image": 1050,
-        "Title": 1051,
-        "Description": 1052,
-        "Price": 1053,
-        "Duration": 1054,
-        "ParticipationCount": 1055,
-        "CommentCount": 1056
+        "Image": 1116,
+        "Title": 1117,
+        "Description": 1118,
+        "Price": 1119,
+        "Duration": 1120,
+        "ParticipationCount": 1121,
+        "CommentCount": 1122
       }
     }
   }
