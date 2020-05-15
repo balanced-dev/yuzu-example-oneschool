@@ -1,0 +1,28 @@
+{
+    "id": "/course",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "header": {
+            "$ref": "/parPageHeader"
+        },
+        "title": {
+            "$ref": "/parCourseTitle"
+        },
+        "content": {
+            "$ref": "/dataGrid",
+            "anyOfType": "parCourseGrid"
+        },
+        "teacher": {
+            "$ref": "/parCourseTeacher"
+        },
+        "comments": {
+            "$ref": "/parComments"
+        },
+        "courses": {
+            "$ref": "/parCourseList"
+        } 
+    },
+    "additionalProperties": false
+}

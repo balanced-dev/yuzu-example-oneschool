@@ -1,0 +1,36 @@
+{
+    "testForm": {
+        "isSuccess": false,
+        "successMessage": "Your submitted message here",
+        "validation": {
+            "title": "Form Builder Validation",
+            "message": ""
+        },
+        "fieldsets": [
+            {
+                "fields": [
+                    {
+                        "name": "email-address",
+                        "type": "email",
+                        "placeholder": "Email Address",
+                        "_ref": "/parFormTextInput"
+                    },
+                    {
+                        "name": "password",
+                        "type": "password",
+                        "placeholder": "Password",
+                        "_ref": "/parFormTextInput"
+                    },
+                    {
+                        "name": "password-reenter",
+                        "type": "password",
+                        "placeholder": "Re-type Password",
+                        "_ref": "/parFormTextInput"
+                    }
+                ]
+            }
+        ],
+        "submitButtonText": "Sign Up",
+        "_ref": "/parFormBuilder"
+    }
+}

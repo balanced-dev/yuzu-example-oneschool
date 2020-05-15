@@ -1,0 +1,21 @@
+{
+    "id": "/parSiteNav",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "navLinks": {
+            "type": "array",
+            "items": {
+                "$ref": "/dataLink"
+            }
+        },
+        "navButtons": {
+            "type": "array",
+            "items": {
+                "$ref": "/dataLink"
+            }
+        } 
+    },
+    "additionalProperties": false
+}

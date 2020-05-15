@@ -1,0 +1,40 @@
+{
+    "testForm": {
+        "isSuccess": false,
+        "successMessage": "Your comment has been submitted",
+        "validation": {
+            "title": "Form Builder Validation",
+            "message": ""
+        },
+        "fieldsets": [
+            {
+                "fields": [
+                    {
+                        "name": "first-name",
+                        "placeholder": "First name",
+                        "_ref": "/parFormTextInput"
+                    },
+                    {
+                        "name": "last-name",
+                        "placeholder": "Last name",
+                        "_ref": "/parFormTextInput"
+                    },
+                    {
+                        "name": "email-address",
+                        "type": "email",
+                        "placeholder": "Email Address",
+                        "_ref": "/parFormTextInput"
+                    },
+                    {
+                        "name": "message",
+                        "placeholder": "Write your message here",
+                        "_ref": "/parFormTextArea"
+                    }
+                ]
+            }
+        ],       
+        "submitButtonText": "Post comment",
+        "_ref": "/parFormBuilder"
+    }
+    
+}

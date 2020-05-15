@@ -1,0 +1,23 @@
+{
+    "testForm": {
+        "isSuccess": false,
+        "successMessage": "Your submitted message here",
+        "validation": {
+            "title": "Form Builder Validation",
+            "message": ""
+        },
+        "fieldsets": [
+            {
+                "fields": [
+                    {
+                        "name": "first-name",
+                        "placeholder": "First name",
+                        "_ref": "/parFormTextInput"
+                    }
+                ]
+            }
+        ],
+        "submitButtonText": "Sign Up",
+        "_ref": "/parFormFooter"
+    }
+}

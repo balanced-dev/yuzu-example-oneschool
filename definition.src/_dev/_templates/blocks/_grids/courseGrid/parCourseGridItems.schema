@@ -1,0 +1,17 @@
+{
+    "id": "/parCourseGridItems",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "array",
+    "items": {
+        "anyOf": [
+            {
+                "$ref": "/parRte"
+            },
+            {
+                "$ref": "/parGridImage"
+            }
+        ]
+    },
+    "additionalProperties": false
+}
