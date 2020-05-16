@@ -11,10 +11,8 @@ namespace OneSchool
     {
         public void Apply(Course source, vmPage_Course dest, UmbracoMappingContext context)
         {
-
             dest.Title.Title = source.TitleTitle;
             dest.Header.Title = source.HeaderTitle;
-            
         }
     }
 }

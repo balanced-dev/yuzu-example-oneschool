@@ -26,7 +26,7 @@ namespace OneSchool
         public virtual bool IsValid(string name, GridControl control)
         {
             var content = control.GetValue<GridControlDtgeValue>();
-            if (content != null)
+            if (content != null && content.Content != null)
             {
                 return content.Content.ContentType.Alias == "teacherProfiles";
             }

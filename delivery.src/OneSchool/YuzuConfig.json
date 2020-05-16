@@ -214,6 +214,10 @@
     {
       "Key": "vmBlock_Comments",
       "Value": "CommentList"
+    },
+    {
+      "Key": "vmBlock_Comments",
+      "Value": "Endpoints"
     }
   ],
   "manualMappers": [
@@ -237,6 +241,13 @@
       "source": "course",
       "mapper": "CommentsTypeAfterMap",
       "group": "Comments"
+    },
+    {
+      "dest": "vmBlock_SiteFooter",
+      "destMember": "",
+      "source": "home",
+      "mapper": "SiteFooterTypeAfterMap",
+      "group": "Footer"
     }
   ]
 }
