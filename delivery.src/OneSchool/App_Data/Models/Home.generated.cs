@@ -108,13 +108,6 @@ namespace YuzuDelivery.UmbracoModels
 		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> NavNavButtons => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link>>("navNavButtons");
 
 		///<summary>
-		/// Nav Links
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
-		[ImplementPropertyType("navNavLinks")]
-		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> NavNavLinks => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link>>("navNavLinks");
-
-		///<summary>
 		/// NewsletterSection Form
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]

@@ -43,9 +43,9 @@ var main = function($) {
 		$('body').on('click', '.arrow-collapse', function(e) {
       var $this = $(this);
       if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-        $this.removeClass('active');
+        //$this.removeClass('active');
       } else {
-        $this.addClass('active');
+        //$this.addClass('active');
       }
       e.preventDefault();  
       

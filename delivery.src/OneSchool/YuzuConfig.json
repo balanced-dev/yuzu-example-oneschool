@@ -38,13 +38,13 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "Image": 55,
-        "Title": 56,
-        "Description": 57,
-        "Price": 58,
-        "Duration": 59,
-        "ParticipationCount": 60,
-        "CommentCount": 61
+        "Image": "cae8ca38-024b-47cb-b928-4b4f25eeed4d",
+        "Title": "28bf9d97-e192-4ed8-b6a6-637d9d78e1c6",
+        "Description": "833995d6-1686-400e-a13d-0813e6957afc",
+        "Price": "60475e0f-f55a-440e-b08f-bad395c30239",
+        "Duration": "6db29b2e-6237-49fc-a70c-29a7e9aae07e",
+        "ParticipationCount": "c34f7425-e58d-49ad-9ace-16e3e18a348b",
+        "CommentCount": "94f2a7ed-8c2c-4731-b7d4-3e9f70220959"
       }
     },
     "vmSub_CommentsCommentForm": {
@@ -57,8 +57,8 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "Title": 62,
-        "Form": 63
+        "Title": "1db8ac69-8d76-4b18-be6b-facab657624b",
+        "Form": "8cc2e4f1-32dd-411f-a4a8-3ad86650210a"
       }
     },
     "vmSub_SiteFooterAboutSection": {
@@ -71,8 +71,8 @@
       },
       "documentTypeAlias": "home",
       "properties": {
-        "Title": 64,
-        "Text": 65
+        "Title": "ac29a42c-c710-4033-af7d-042edc6d95c7",
+        "Text": "0ba22909-ceec-4123-a59a-cf869158a45c"
       }
     },
     "vmSub_SiteFooterLinkSection": {
@@ -85,8 +85,8 @@
       },
       "documentTypeAlias": "home",
       "properties": {
-        "Title": 66,
-        "Links": 67
+        "Title": "cc1d65e4-2237-4bc4-88e7-1c0d0a030c99",
+        "Links": "672f4a1a-2b3e-42da-8eaa-391098ab4098"
       }
     },
     "vmSub_SiteFooterNewsletterSection": {
@@ -99,9 +99,9 @@
       },
       "documentTypeAlias": "home",
       "properties": {
-        "Title": 68,
-        "Text": 69,
-        "Form": 70
+        "Title": "1f8f5ff2-d6ed-463d-bdab-01b73e330d71",
+        "Text": "0f27995f-557c-4fd3-b22d-b6ff128257e7",
+        "Form": "86ad1d7a-f504-49d3-a02f-846a3e71d269"
       }
     },
     "vmBlock_SiteNav": {
@@ -114,8 +114,7 @@
       },
       "documentTypeAlias": "home",
       "properties": {
-        "NavLinks": 71,
-        "NavButtons": 72
+        "NavButtons": "a47ea265-2491-4d16-aaac-76abfa74d301"
       }
     },
     "vmSub_PageHeroSignupForm": {
@@ -128,8 +127,8 @@
       },
       "documentTypeAlias": "pageHero",
       "properties": {
-        "Title": 73,
-        "Form": 74
+        "Title": "f6ceaf4e-5a58-4d65-a0d6-789c0fa19808",
+        "Form": "fe1b63bb-ff52-4e43-b232-4b092f4406db"
       }
     },
     "vmBlock_Comments": {
@@ -153,9 +152,9 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "BackgroundImage": 75,
-        "Title": 76,
-        "SubTitles": 77
+        "BackgroundImage": "21cfd876-68f9-4cc8-91cc-e529a505e51e",
+        "Title": "786b7da4-0411-4bcd-89c5-a997166cb00f",
+        "SubTitles": "b98468a0-966a-497b-8530-84bcac3c4430"
       }
     },
     "vmBlock_CourseTitle": {
@@ -168,8 +167,8 @@
       },
       "documentTypeAlias": "course",
       "properties": {
-        "Title": 80,
-        "Schedule": 81
+        "Title": "6a58f448-e5de-4e86-bfa9-55d28ff7cb9f",
+        "Schedule": "b5a43a94-95c2-413b-ba51-a3b739a2b07c"
       }
     },
     "vmBlock_SiteFooter": {
@@ -182,7 +181,7 @@
       },
       "documentTypeAlias": "home",
       "properties": {
-        "IsGrey": 82
+        "IsGrey": "216432bd-89a6-4440-8db7-43937e656f33"
       }
     },
     "vmBlock_SiteHeader": {
@@ -195,8 +194,8 @@
       },
       "documentTypeAlias": "home",
       "properties": {
-        "Logo": 83,
-        "CompanyName": 84
+        "Logo": "46191cc2-f72a-40c9-b8d9-743ed157d0d6",
+        "CompanyName": "282f63d7-f5a3-433c-86c6-02509b3fcf21"
       }
     }
   },
@@ -218,6 +217,10 @@
     {
       "Key": "vmBlock_Comments",
       "Value": "Endpoints"
+    },
+    {
+      "Key": "vmBlock_SiteNav",
+      "Value": "NavLinks"
     }
   ],
   "manualMappers": [
@@ -248,6 +251,13 @@
       "source": "home",
       "mapper": "SiteFooterTypeAfterMap",
       "group": "Footer"
+    },
+    {
+      "dest": "vmBlock_SiteNav",
+      "destMember": "NavLinks",
+      "source": "home",
+      "mapper": "SiteNavNavLinksMemberResolver",
+      "group": "Nav"
     }
   ]
 }
